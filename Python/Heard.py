@@ -1,0 +1,20 @@
+from turtle import *
+color("red")
+begin_fill()
+pensize(5)
+setposition(0,0)
+left(50)
+forward(120)
+circle(42,200)
+right(140)
+circle(42,200)
+forward(120)
+end_fill()
+penup()
+setposition(0,200)
+pendown()
+write('I Miss You',font=
+      ('Verdana',20,"bold"),
+      align="center")
+hideturtle()
+done()

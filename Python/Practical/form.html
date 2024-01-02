@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>form</title>
+    <style>
+        legend {
+            text-align: center;
+            color: rgb(44, 30, 30);
+            font-size: 20px;
+            font-family: Dancing Script, cursive;
+        }
+        
+        fieldset {
+            min-height: auto;
+            text-align: center;
+            margin: auto;
+        }        
+            
+        #submit{
+            color: black;
+            background-color: blue;
+            border-radius: 8px;
+            width: 90px;
+            padding: 4px;
+            position: relative;
+            right: 50px;
+        }
+        #reset {
+            color: black;
+            background-color: red;
+            border-radius: 8px;
+            width: 90px;
+            padding: 4px;
+            position: relative;
+            left: 50px;
+        }
+        #fix {
+            width: 25%;
+            min-height:  100px;
+            background-color: yellowgreen;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <b>Requared Field are denoted by'*' .</b>
+    <form>
+        <fieldset id="fix">
+        <fieldset>
+            <legend><b>Personal Details</b></legend>
+            <label>First Name* :</label>
+            <input type="text" placeholder="Enter your First Name"><br>
+            <label>Middle Name :</label>
+            <input type="text" placeholder="Enter your Middle Name"><br>
+            <label>Last Name* :</label>
+            <input type="text" placeholder="Enter your Last Name"><br><br>
+            <label>Date of birth (D.O.B.)* :</label>
+            <input type="date" date="06/04/2023">
+        </fieldset>
+        <fieldset>
+            <legend><b>Gender*</b></legend>
+            Male :
+            <input type="radio" name="Gender" id="Male">
+            Female :
+            <input type="radio" name="Gender" id="Female">
+            Others :
+            <input type="radio" name="Gender" id="Others">
+        </fieldset>
+        <fieldset>
+            <legend><b>Contect Details</b></legend>
+            <label>Phone Number* :</label>
+            <input type="number" placeholder="Enter your Phone Number"><br>
+            <label>Email Address* :</label>
+            <input type="text" placeholder="Enter your Phone Email">
+        </fieldset>
+        <fieldset>
+            <legend><b>Address Details</b></legend>
+            <label for="Country">Country* :</label>
+            <input type="text" placeholder="Enter your Country"><br>
+            <label for="State">State* :</label>
+            <input type="text" placeholder="Enter your State"><br><br>
+            <label for="City">City* :</label>
+            <input type="text" placeholder="Enter your City"><br>
+            <label for="Pincode">Pincode* :</label>
+            <input type="number" placeholder="Enter your Pincode">
+        </fieldset>
+        <fieldset>
+            <legend><b>Login Detail</b></legend>
+            <label for="user">User-Name* :</label>
+            <input type="text" value="prahladmahor888">
+            <label for="Password">Password* :</label>
+            <input type="password" name="Password" value="Abc@143" placeholder="Enter your Password">
+        </fieldset>
+        <button id="submit">Submit</button>
+        <button id="reset">Reset</button>
+        </fieldset>
+    </form>
+</body>
+</html>
