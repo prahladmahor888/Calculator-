@@ -1,0 +1,28 @@
+html, body {
+    min-height: 100%;
+    width: 100%;
+}
+
+.button{
+    width: 60px;
+    padding: 20px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: yellowgreen;
+}
+
+.row {
+    margin: 8px 0; 
+}
+
+.row inout{
+    margin: 0;
+    padding: 10px 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.input {
+    width:250px;
+}

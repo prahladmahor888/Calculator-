@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknown side</title>
+
+    <style>
+        textarea, input[type=text], [type=password], [type=number], [type=name], [type=button]
+        {
+        
+            margin: 10px;
+            padding: 15px 17px;
+            display: inline-block;
+            border: 2px solid rgb(128, 128, 223);
+            box-sizing: border-box;
+        
+        }
+        form
+        {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;" color="yellow">Sign up</h1>
+    <fieldset>
+    <form style="text-align: center;">
+        First Name :
+        <input type="text" name="First Name" placeholder="First Name"><br>
+        <br>
+        <br>
+        Last Name :
+        <input type="text" name="Last Name" placeholder="Last Name"><br>
+        <br>
+        <br>
+        Gender :
+        <br>
+        <input type="radio" name="Male"> Male
+        <input type="radio" name="Female"> Female
+        <input type="radio" name="Other"> Other
+        <br>
+        <br>
+        <div class="form_control"> 
+            <label for="date"> D.O.B.</label>
+            <input value="2023-14-03" type="date" id="date" name="date"/>
+        </div>
+        <br>
+        <br>
+        <label>Phone :</label>
+        <input type="name" taxt="country code" value="+91" maxlength="3"><br>
+        <input type="number" maxlength="10">
+        <br>
+        <br>
+        Password :
+        <input type="password" name="Password" placeholder="Password" maxlength="10"><br>
+        <br>
+        Discription :
+        <br>
+        <br>
+        <textarea rows="5" cols="50" name="Discription">
+            type discription here....
+        </textarea> 
+        <br>
+        <input type="button" value="Submit">
+      
+    </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <title>Millionaire Track</title>
+    </head>
+    <body>
+        <div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-header start -->
+                <div class="page-header">
+                    <div class="row align-items-end">
+                        <div class="col-lg-8">
+                            <div class="page-header-title">
+                                <button type="button" id="sidebarCollapse"
+                                    class="btn navbar-btn">
+                                    <i class="glyphicon glyphicon-align-left"></i>
+                                    &nbsp;
+                                    <span></span>
+                                </button>
+                                <div class="d-inline">
+                                    <h4 class='color:Brown'>Dashboard</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                     <h1 class="welcome__usre"><span>Welcome</span> Prahalad</h1>
+                                                          
+                <div class="page-body">
+                    <div class="row row-new">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="white_card user_crm_wrapper user_amt_list">
+                                <div class="card__UsreDeatil">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                                            <div class="detail__main">
+                                                   <div class="usre__img">
+                                                    <!--<img src="</?php echo $profile;?>"/>-->
+                                                    <img id="img_profile" src="../user/profile/IMG_20230707_203643_028.jpg">
+                                                </div>
+                                                 </?php
+                                                    foreach($profile as $data)
+                                                    {
+                                                    ?>
+                                                    <div class="user__nameDate">
+                                                    <p> Prahalad                                                                                    <span>prahladmahor888@gmail.com</span>
+                                                    </p>
+                                                </div>
+                                                </?php }?>
+
+                                                <div class="leader__boardView userDetail__boardView"
+                                                    style="display:none;">
+                                                    <div class="dropdown">
+                                                        <span>
+                                                            <i class="fa fa-ellipsis-h f_s_11 white_text"
+                                                                aria-hidden="true"></i></span>
+                                                        <div class="dropdown-content">
+                                                            <a href="javascript:void(0)"
+                                                                data-toggle="modal"
+                                                                data-target="#userdetail">View
+                                                                Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="single_crm">
+                                            <div class="crm_head d-flex align-items-center justify-content-between test">
+                                                <div class="thumb">
+                                                    <img src="asset/rupee-indian.png" />
+                                                </div>
+                                                <i class="fa fa-ellipsis-h f_s_11 white_text getsalesdata"
+                                                    id="day_1" aria-hidden="true" data-toggle="modal" data-target="#myModal3"></i>
+                                            </div>
+                                            
+                                            <div class="crm_body">
+                                                <h4><span
+                                                        id="MainContenttxtTodayEarning">₹</span>
+                                                    <span>
+                                                        0</span>
+                                                </h4>
+                                                <p>Today's Earning</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="single_crm single_crm_1">
+                                            <div
+                                                class="crm_head crm_bg_1 d-flex align-items-center justify-content-between">
+                                                <div class="thumb">
+
+                                                    <img src="asset/rupee-indian.png" />
+                                                </div>
+                                                <i class="fa fa-ellipsis-h f_s_11 white_text getsalesdata"
+                                                    id="day_7" aria-hidden="true" data-toggle="modal" data-target="#myModal3"></i>
+                                            </div>
+                                            
+                                                                                                                    
+                                            <div class="crm_body">
+                                                <h4><span id="txtTodayEarning">₹</span>
+                                                    <span>
+                                                          0</span>
+                                                </h4>
+                                                <p>Last 7 Days Earning</p>
+                                            </div>
+                                                                                                                    
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="single_crm single_crm_2 last_crm">
+                                            <div
+                                                class="crm_head crm_bg_2 d-flex align-items-center justify-content-between">
+                                                <div class="thumb">
+
+                                                    <img src="asset/rupee-indian.png" />
+                                                </div>
+                                                <i class="fa fa-ellipsis-h f_s_11 white_text getsalesdata"
+                                                    id="day_30" aria-hidden="true" data-toggle="modal" data-target="#myModal3"></i>
+                                            </div>
+                                            
+                                            <div class="crm_body">
+                                                <h4><span id="txtEarning">₹</span>
+                                                    <span>
+                                                        400</span>
+                                                </h4>
+                                                <p>Last 30 Days Earning</p>
+                                            </div>
+                                                                                                                    
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                                        <div class="single_crm single_crm_3 last_crm">
+                                            <div
+                                                class="crm_head crm_bg_3 d-flex align-items-center justify-content-between">
+                                                <div class="thumb">
+
+                                                    <img src="asset/rupee-indian.png" />
+                                                </div>
+                                                <div class="leader__boardView">
+                                                    <div class="dropdown">
+                                                        <span>
+                                                            <i class="fa fa-ellipsis-h f_s_11 white_text"
+                                                                aria-hidden="true"></i></span>
+                                                        <div class="dropdown-content">
+                                                            <a href="total_affiliate_list">View
+                                                                All</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            
+                                            
+                                            <div class="crm_body">
+                                                <h4><span id="txtng">₹</span>
+                                                    <span>
+                                                        400
+                                                    </span>
+                                                </h4>
+                                                <p>All Time Earning</p>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-md-8 col-sm-8 col-xs-12">
+                              <div class="white_card card_height_100 mb_30">
+                                <div class="white_card_header">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-8 col-sm-8 col-xs-8">
+                                            <div class="main-title">
+                                                <h3 class="m-0">Your Recent Sales</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                                            <div class="row justify-content-end">
+                                                <div class="col-lg-12">
+                                                    <div class="leader__boardView">
+                                                        <div class="dropdown">
+                                                            <span>
+                                                                <i class="fa fa-ellipsis-h f_s_11 white_text"
+                                                                    aria-hidden="true"></i></span>
+                                                            <div class="dropdown-content">
+                                                                <a
+                                                                    href="">View
+                                                                    All
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div
+                                >
+                                <div class="white_card_body" style="max-height: 315px; overflow-y: scroll;">
+                                    
+                                                                                                     
+                                    <div class="single_user_pil d-flex align-items-center justify-content-between">
+                                        <div class="user_pils_thumb d-flex align-items-center">
+                                            <div class="thumb_34 mr_15 mt-0">
+                                                <img class="img-fluid radius_50"
+                                                    src="../user/profile/" alt="">
+                                            </div>
+                                            <span class="f_s_14 f_w_400 text_color_11">Samriddhi </span>
+                                        </div>
+                                        <div class="user_info">
+                                            ₹&nbsp; 0<br />
+                                            <span class="timing">2023-08-10 14:09:50</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row row-new">
+                        <div class="col-md-12 col-sm-4 col-xs-12">
+                            <div class="white_card user_crm_wrapper user_amt_list">
+                                <div class="card__UsreDeatil">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                                            <div class="detail__main">
+                                                   <div class="usre__img">
+                                                    <img src="Array"/>
+                                                    <img id="img_profile" src="../assets/images/online_MARKETING_MASTERY.png">
+                                                    </div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-12">
+                                                                <div class="explore__moreBTN">
+                                                                    <span class="btn" style="border-radius: 40px; background-color: #24B1E5; 
+                                                                    color: white; height: 61px; padding: 8px; width: 100%;">Thank you for Enrolling with <br> Millionaire Track</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <div class="user__nameDate">
+                                                    <p>Your Current Active plan is <font color="brown"> Online Marketing Mastery</font>
+                                                        <!--<span>This Is Your Current Active Plan</span>-->
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- msg last end-->
+            </div>
+            </div>
+        </div>
+
+
+    Modal
+    <div class="modal fade zoom_none" id="myModal2" role="dialog">
+        <div class="modal-dialog" style="max-width: 590px;">
+
+</div>
+    </div>
+    </body>
+</html>

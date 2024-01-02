@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Leyout setup</title>
+
+    <style type="text/css">
+        *
+        {
+            margin: 2px;
+            padding: 3px;
+            box-sizing: border-box;
+            font-family: Arial;
+
+        }
+        
+        #Div1
+
+        {
+        
+            width: 100%;
+            min-height: 50px;
+            background-color: lightgray;
+            text-align: center;
+            padding-left: 2%;
+            line-height: 50px;
+            margin-bottom: 8px;
+
+        }
+
+        #div2
+
+        {
+            width: 100%;
+            min-height: 30px;
+            background-color: lightgray;
+            padding-left: 50%;
+            line-height: 30px;
+            margin-bottom: 8px;
+ 
+        }
+
+        #div3
+
+        {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        #Funny
+
+        {
+            width: 48%;
+            min-height: 400px;
+            background-color: lightblue;
+            float: left;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        #Sad
+
+        {
+            width: 49%;
+            min-height: 400px;
+            background-color: lightblue;
+            float: right;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        .clearfix ::after
+
+        {
+            content: "";
+            display: block;
+            clear: both;      
+        }
+
+        #div4
+
+        {
+            width: 100%;
+            min-height: 30px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="Div1">
+    Broken Heart
+</div>
+
+<div id="div2">
+    Sadness
+</div>
+
+<div id="div3" class="clearfix">
+    <div id="Funny">
+        Funny jokes
+    </div>
+    <div id="Sad">
+        Sad sayari
+    </div>
+</div>
+<div id="div4">
+    Masti
+</div>
+</body>
+</html>

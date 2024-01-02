@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            margin: 0;
+        }
+        .container {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .cube {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(20deg) rotateY(20deg) rotateZ(0deg);
+            animation: rotate 5s linear infinite;
+        }
+        .cube > div {
+            position: absolute;
+            opacity: 10;
+            background: linear-gradient(to right, #05295f, #00bf72);
+        }
+        .front, .back, .left, .right, .top, .bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 52px);
+        }
+
+/* mantion the angle of any face  */
+
+        .front {
+            transform: translateZ(78px);
+        }
+        .back{
+            transform: rotateY(90deg) translateZ(78px);
+        }
+        .top {
+            
+            transform: rotateY(180deg) translateZ(78px);
+        }
+        .bottom {
+            
+            transform: rotateX(90deg) translateZ(78px);
+        }
+        .left {
+            
+            transform: rotateY(-90deg) translateZ(78px);
+        }
+        .right {
+            transform: rotateX(-90deg) translateZ(78px);
+        }
+
+/* fix the evry box-sizing and mantion the color */
+
+        .front div{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin: 1px;
+        }
+        .back div{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(231, 153, 8);
+            margin: 1px;
+        }
+        .left div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 1px;
+        }
+        .right div{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            margin: 1px;
+        }
+        .top div{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            margin: 1px;
+        }
+        .bottom div{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(217, 255, 0);
+            margin: 1px;
+        }
+
+/* fix animation angle */
+        
+        @keyframes rotate {
+            100%{
+                transform: rotateX(0deg) rotateY(360deg) rotateZ(350deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="front">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="back">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="top">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bottom">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        let box = document.querySelector('.cube')
+        const directions = ['front', 'back', 'left', 'right', 'top', 'bottom']
+
+        for(var i of directions){
+            let directions = document.createElement('div')
+            box.appendChild(direction)
+            direction.classList.add(i)
+
+            direction.setAttribute('style', `--clr:${}`)
+        }
+    </script> -->
+</body>
+</html>

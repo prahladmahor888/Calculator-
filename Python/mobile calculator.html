@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body #fullheight {
+            min-height: 100% !important;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+
+        .container {
+            height: 100%;
+            background-color: black;
+        }
+
+        .result {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            color: white;
+            height: 39%;
+        }
+
+        .result span {
+            margin-right: 60px;
+            font-size: 210px;
+            justify-self: flex-end;
+        }
+
+        .buttons {
+            width: 100%;
+            height: 60%;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            color: white;
+            border-radius: 100%;
+            width: 210px;
+            height: 210px;
+            padding: 10px;
+            cursor: pointer;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .percent {
+            background-color: #A5A5A5;
+            border: none;
+            color: black;
+        }
+
+        .item1 {
+            background-color: #A5A5A5;
+            border: none;
+        }
+
+        .item3 {
+            background-color: #ff9f0a;
+            border: none;
+        }
+
+        .numbers, .comma {
+            background-color: #343434;
+            border: none;
+        }
+
+        .itemZero {
+            background-color: #343434;
+            width: 435px;
+            border-radius: 135px;
+            grid-column: span 2;
+            border: none;
+        }
+
+        .negative, .clear {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <span>0</span>            
+        </div>
+
+        <div class="buttons">
+            <button class="item item1 clear">AC</button>
+            <button class="item item1 negative">+/-</button>
+            <button class="item item persent sing">%</button>
+            <button class="item item3 sing">/</button>
+            <button class="item numbers">7</button>
+            <button class="item numbers">8</button>
+            <button class="item numbers">9</button>
+            <button class="item item3 sing">X</button>
+            <button class="item numbers">4</button>
+            <button class="item numbers">5</button>
+            <button class="item numbers">6</button>
+            <button class="item item3 sing">-</button>
+            <button class="item numbers">1</button>
+            <button class="item numbers">2</button>
+            <button class="item numbers">3</button>
+            <button class="item item3 sing">+</button>
+            <button class="item titemZero numbers">0</button>
+            <button class="item comma">,</button>
+            <button class="item item3 equals">=</button>
+        </div>
+    </div>
+    <script>
+        const numbers = document.querySelectorAll('numbers');
+        const result = document.querySelector('result span');
+        const signs = document.querySelectorAll('sign')
+        const equals = document.querySelector('equals');
+        const clear = document.querySelector('clear');
+        const negative = document.querySelector('negative');
+        const percent = document.querySelector('percent');
+
+        let firstvalue = "";
+        let isFirstvalue = false;
+        let secondvalue = "";
+        let isSecondvalue = false;
+        let sign = "";
+        let resultvalue = 0;
+
+        for(let i = 0;  i < numbers.length; i++) {
+            numbers[i].addEventListener('click', (e) => {
+                let atr = e.target.getAttribute('value');
+                if (isFirstvalue === false){
+                    getFristValue(atr)
+                }
+                if(isSecondvalue == false){
+                    getsecondvalue(atr);
+                }
+            })
+        }
+
+        function getFristValue(el) {
+            result.innerHTML = "";
+            firstvalue += el;
+            result.innerHTML = firstvalue;
+            firstvalue =  +firstvalue;
+
+        }
+
+        function getsecondvalue(el) {
+            if(firstvalue != "" && sign != "") {
+                secondvalue += el;
+                result.innerHTML = secondvalue;
+                secondvalue = +secondvalue;
+            }
+        }
+
+        function getsign() {
+            for(let i = 0; i < signs.length; i++) {
+                signs[i].addEventListener('click', (e) => {
+                    sign = e.target.getAttribute('value');
+                    isFirstvalue = true;
+                })
+            } 
+        }
+        getsign();
+        equals.addEventListener('click', () => {
+            result.innerHTML = "";
+            if(sign === "+") {
+                resultvalue = firstvalue + secondvalue;
+            }
+            else if(sign === "-"){
+                resultvalue = firstvalue - secondvalue;
+            }
+            else if(sign === "X") {
+                resultvalue = firstvalue * secondvalue;
+            }
+            else if(sign === "/") {
+                resultvalue = firstvalue / secondvalue;
+            }
+            result.innerHTML = resultvalue;
+            firstvalue = resultvalue;
+            secondvalue = "";
+        })
+
+        function checkResultLength() {
+            resultvalue = JSON.stringify(resultvalue);
+            result.innerHTML = resultvalue.toFixed(5);
+        }
+
+        negative.addEventListener('click', () => {
+            result.innerHTML = "";
+            if(firstvalue != "") {
+                resultvalue = -firstvalue;
+                firstvalue = resultvalue;
+            }
+            if(firstvalue != "" && secondvalue != "" && sign != "") {
+                resultvalue = -resultvalue;
+            }
+
+            result.innerHTML = resultvalue;
+        })
+
+        percent.addEventListener('click', () =>{
+            result.innerHTML = "";
+            if(firstvalue != "") {
+                resultvalue = -firstvalue / 100;
+                firstvalue = resultvalue;
+            }
+            if(firstvalue != "" && secondvalue != "" && sign != "") {
+                resultvalue = -resultvalue / 100;
+            }
+
+            result.innerHTML = resultvalue; 
+        })
+
+        clear.addEventListener('click', () => {
+            result.innerHTML= 0;
+
+            firstvalue = "";
+            isFirstvalue = false;
+            secondvalue = "";
+            isSecondvalue = false;
+            sign = "";
+            resultvalue = 0;
+        })
+    </script>
+</body>
+</html>
